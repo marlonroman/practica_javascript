@@ -35,6 +35,8 @@ console.log(devolver());
 console.log(sumar());
 suiche();
 
+// objetos
+
 function objetos(){
     var nombre = prompt("Ingrese el nombre de la persona: ");
     var apellido = prompt("Ingrese el apellido de la persona: ");
@@ -53,5 +55,42 @@ function objetos(){
     console.log(marlitonvalue+" - "+andresvalue+" - "+nicotevalue);
 }
 
+function objetos2(){
+    var persona = {
+        nombre: "Marlon",
+        apellido: "Román",
+        edad: "18",
+    }
+    
+    function checar_objeto(checar_prop){
+        if (persona.hasOwnProperty(checar_prop)){
+            return persona[checar_prop];
+        } else {
+            return "No encontrado";
+        }
+    }
+
+    nom = prompt("Ingrese el nombre de la variable: ")
+    console.log(checar_objeto(nom));
+}
+
+function objetos3(){
+    function album (cancion){
+        var spinetta = {
+            artaud : "Cantata de puentes amarillos",
+            jardin : "anillo",
+            almendra : "muchacha",
+        }
+
+        result = spinetta[cancion];
+        return result;
+    }
+
+    res = prompt("Ingrese el nombre del álbum: ");
+    console.log(album(res));
+}
+
+objetos3();
 objetos();
+objetos2();
 
